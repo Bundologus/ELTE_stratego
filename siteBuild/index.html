@@ -31,13 +31,119 @@
     ></script>
   </head>
   <body class="container-fluid">
+    <h1 class="hidden">Stratego</h1>
     <header class="row bg-dark text-white-50">
       <p class="col-12 text-center">
         <span id="hide-header">Üdvözli a </span><a href="">STRATEGO</a
         ><span id="hide-header">, Generális!</span>
       </p>
     </header>
-    <main class="row"></main>
+    <main class="row">
+      <div class="col-12 container">
+        <div class="row" id="buttonsRow">
+          <h2 class="hidden">Játék</h2>
+          <div class="col-md-2"></div>
+          <div
+            id="menuButtonWrapper"
+            class="col-md-8 d-flex flex-row justify-content-between"
+          >
+            <button type="button" class="btn btn-lg btn-success menu-btn">
+              Új Játék Indítása
+            </button>
+            <div class="dropdown menu-btn">
+              <button
+                id="join-room-btn"
+                type="button"
+                class="btn btn-lg btn-success dropdown-toggle w-100 h-100"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Csatlakozás egy szobához
+              </button>
+              <div class="dropdown-menu w-100" aria-labelledby="joinRoomBtn">
+                <form>
+                  <div class="form-group">
+                    <input
+                      type="textbox"
+                      class="form-control"
+                      id="roomId"
+                      placeholder="A szoba száma"
+                    />
+                  </div>
+                  <button type="submit" class="btn btn-success">
+                    Csatlakozás
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-2"></div>
+        </div>
+        <div class="row" id="rulesRow">
+          <h2 class="hidden">Szabályok</h2>
+          <div class="col-md-2"></div>
+          <div class="col-md-8 card">
+            <div class="card">
+              <div class="card-body bg-light overflow-auto">
+                <h3>A játék szabályai röviden:</h3>
+                <p>
+                  A játékban két játékos játszik egymással egy-egy hadsereg
+                  élén. Cél az ellenfél zászlójának megszerzése. A tábla 10x10
+                  cellából áll. Eredetileg mindkét félnek 40 bábuja van: 1
+                  zászló, 5 bomba, és katonák 1-től 10-es erővel. Egymás bábuit
+                  azonban nem látják, csak akkor, amikor két bábu csatázni kezd.
+                  Ekkor az erősebb bábu marad a pályán, a gyengébbik leesik a
+                  tábláról. Ha két azonos bábu harcol egymással, akkor mindkettő
+                  lekerül a tábláról. Minden bábu csak 1-et léphet előre, hátra,
+                  jobbra, balra. a zászló és az akna értelemszerűen nem tud
+                  lépni. A táblán lehetnek olyan mezők, amelyre nem lehet lépni
+                  (tó). Van pár speciális figura:
+                </p>
+                <ul>
+                  <li>
+                    <strong>Az 1-es a kém</strong>, ha ő támadja meg az ellenfél
+                    10-esét, akkor megöli.
+                  </li>
+                  <li>
+                    <strong>A 2-es a felderítő</strong>, ő akárhány mezőt
+                    átugorva léphet vagy támadhat. A tavat ő sem tudja átugrani.
+                  </li>
+                  <li>
+                    <strong>A 3-as az aknász.</strong> Csak ő tudja
+                    hatástalanítani a bombát.
+                  </li>
+                  <li>
+                    <strong>Bomba</strong>: aki rálép, az felrobban, a bomba
+                    viszont megmarad. Csak az aknász képes leszedni a tábláról.
+                  </li>
+                  <li>
+                    <strong>Zászló</strong>: a szászlót támadva nincs csata, a
+                    rálépő játékos nyer.
+                  </li>
+                </ul>
+                <h3>A játék menete:</h3>
+                <p>
+                  Az első játékos választ egy figurát, majd egy másik mezőt
+                  választ, ahova lépni szeretne vele. Amennyiben a figura oda
+                  tud lépni, de ellenséges figura birtokolja a mezőt, csata
+                  következik. Összehasonlítjuk a két figura erejét a fenti
+                  szabályok szerint, és a vesztes lekerül a tábláról. A játéknak
+                  akkor van vége, ha valamely játékos megszerzi a másik
+                  zászlaját.
+                </p>
+                <a
+                  target="_blank"
+                  href="http://www.ketaklub.hu/letoltes/Stratego%20Aoriginal%20Piatnik.pdf"
+                  >(Részletes szabály leírás)</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2"></div>
+        </div>
+      </div>
+    </main>
     <footer class="row bg-dark"></footer>
   </body>
 </html>

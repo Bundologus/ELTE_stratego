@@ -3,9 +3,9 @@ footer {
   height: 100px;
 }
 
-header {
-  /* background-color: #54140a; */
-}
+/*header {
+  background-color: #54140a;
+}*/
 
 main {
   height: calc(100vh - 200px);
@@ -15,4 +15,23 @@ main {
 header p {
   font-size: 3em;
   line-height: 90px;
+}
+
+.menu-btn {
+  width: 30vw;
+  height: 90px;
+  font-size: 2em;
+}
+
+#menuButtonWrapper {
+  margin: 90px 0 90px 0;
+  padding: 0;
+}
+
+#join-room-btn {
+  font-size: unset;
+}
+
+.hidden {
+  display: none;
 }
