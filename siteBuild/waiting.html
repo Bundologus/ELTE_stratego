@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    /-->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <title>Stratego</title>
+  </head>
+  <body class="container-fluid">
+    <h1 class="hidden">Stratego</h1>
+    <header class="row text-white-50">
+      <p class="col-12 text-center">
+        <span id="hide-header" class="hidden">Üdvözli a </span
+        ><a id="gameTitle" href="">STRATEGO</a
+        ><span id="hide-header" class="hidden">, Generális!</span>
+      </p>
+    </header>
+    <main class="row">
+      <div class="col-12 container">
+        <div class="row" id="buttonsRow">
+          <h2 class="hidden">Váró</h2>
+          <div class="col-md-2"></div>
+          <div class="col-md-8 d-flex flex-column align-items-md-center">
+            <p class="waitingRoomText waitingRoomItem">
+              Várakozás második játékosra...
+            </p>
+            <p id="waitingRoomId" class="waitingRoomText waitingRoomItem">
+              123&nbsp;456&nbsp;789
+            </p>
+            <button
+              type="button"
+              id="backToIndex"
+              class="btn menu-btn menu-btn-color waitingRoomItem"
+            >
+              Vissza a kezdőlapra
+            </button>
+          </div>
+          <div class="col-md-2"></div>
+        </div>
+      </div>
+    </main>
+    <footer class="row"></footer>
+  </body>
+</html>
