@@ -19,7 +19,8 @@ button,
 input,
 h1,
 h2,
-h3 {
+h3,
+#headerText {
   font-family: var(--font-regular) !important;
 }
 
@@ -102,6 +103,50 @@ main {
 header p {
   font-size: 3em;
   line-height: 90px;
+}
+
+.header-text-wrapper {
+  padding: 5px;
+  width: 6em;
+  overflow: hidden;
+  position: inherit;
+}
+
+.header-wrapper:first-of-type {
+  text-align: right;
+  padding-right: 4px;
+}
+
+.header-wrapper:last-of-type {
+  padding-left: 0;
+}
+
+#headerText {
+  position: absolute;
+  transition-delay: 0.2s;
+  transition-duration: 1.5s;
+  transition-timing-function: ease;
+  font-size: 3rem;
+}
+
+.header-text-left {
+  right: 0.3em;
+  transition-property: right;
+}
+
+.header-text-left.hidden {
+  display: block !important;
+  right: -4.2em;
+}
+
+.header-text-right {
+  left: 0;
+  transition-property: left;
+}
+
+.header-text-right.hidden {
+  display: block !important;
+  left: -5em;
 }
 
 .menu-btn {

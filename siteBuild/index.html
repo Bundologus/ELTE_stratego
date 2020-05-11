@@ -1,12 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <!--link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
-    /-->
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -34,14 +28,20 @@
   <body class="container-fluid">
     <h1 class="hidden">Stratego</h1>
     <header class="row text-white-50">
-      <p class="col-12 text-center">
-        <span class="hide-header-wrapper"
-          ><span class="hide-header-text">Üdvözli a </span></span
-        ><a id="gameTitle" href="">STRATEGO</a
-        ><span class="hide-header-wrapper"
-          ><span class="hide-header-text"> Generális!</span></span
-        >
-      </p>
+      <h2
+        id="headerText"
+        class="col-12 d-flex justify-content-center align-items-center"
+      >
+        <div class="header-text-wrapper">
+          <span class="header-text header-text-left">Üdvözli a </span>
+        </div>
+        <div id="gameTitleWrapper">
+          <a id="gameTitle" href="">STRATEGO</a>
+        </div>
+        <div class="header-text-wrapper">
+          <span class="header-text header-text-right">, Generális!</span>
+        </div>
+      </h2>
     </header>
     <main class="row">
       <div class="col-12 container">
@@ -146,6 +146,8 @@
         </div>
       </div>
     </main>
-    <footer class="row"></footer>
+    <footer class="row">
+      <script src="./index.js" type="module"></script>
+    </footer>
   </body>
 </html>
