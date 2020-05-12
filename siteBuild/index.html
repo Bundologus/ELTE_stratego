@@ -28,10 +28,7 @@
   <body class="container-fluid">
     <h1 class="hidden">Stratego</h1>
     <header class="row text-white-50">
-      <h2
-        id="headerText"
-        class="col-12 d-flex justify-content-center align-items-center"
-      >
+      <h2 class="col-12 d-flex justify-content-center align-items-center">
         <div class="header-text-wrapper">
           <span class="header-text header-text-left">Üdvözli a </span>
         </div>
@@ -52,14 +49,19 @@
             id="menuButtonWrapper"
             class="col-md-8 d-flex flex-row justify-content-between"
           >
-            <button type="button" class="btn menu-btn menu-btn-color">
+            <a
+              type="button"
+              role="button"
+              href="waiting.html"
+              class="btn menu-btn menu-btn-color d-flex align-items-center justify-content-center"
+            >
               Új Játék Indítása
-            </button>
+            </a>
             <div class="dropdown menu-btn">
               <button
                 id="join-room-btn"
                 type="button"
-                class="btn btn-lg menu-btn-color dropdown-toggle w-100 h-100"
+                class="btn menu-btn-color dropdown-toggle w-100 h-100"
                 data-toggle="dropdown"
                 aria-haspopup="true"
                 aria-expanded="false"

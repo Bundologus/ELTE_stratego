@@ -65,16 +65,6 @@ header {
   );
 }
 
-#gameTitle {
-  color: var(--color-rosewood);
-  font-family: var(--font-heavy) !important;
-  font-weight: 700 !important;
-}
-
-#gameTitle:hover {
-  text-decoration: none;
-}
-
 main {
   height: calc(100vh - 200px);
   background: rgb(36, 0, 0);
@@ -100,52 +90,60 @@ main {
   z-index: 1;
 }
 
+#gameTitle {
+  color: var(--color-rosewood);
+  font-family: var(--font-heavy) !important;
+  font-weight: 700 !important;
+  font-size: 3rem;
+}
+
+#gameTitle:hover {
+  text-decoration: none;
+}
+
 header p {
-  font-size: 3em;
+  font-size: 3rem;
   line-height: 90px;
 }
 
 .header-text-wrapper {
   padding: 5px;
-  width: 6em;
+  width: calc(50% - 5rem);
   overflow: hidden;
-  position: inherit;
 }
 
-.header-wrapper:first-of-type {
+.header-text-wrapper:first-of-type {
   text-align: right;
   padding-right: 4px;
 }
 
-.header-wrapper:last-of-type {
-  padding-left: 0;
-}
-
-#headerText {
-  position: absolute;
+.header-text {
   transition-delay: 0.2s;
   transition-duration: 1.5s;
   transition-timing-function: ease;
   font-size: 3rem;
+  position: relative;
 }
 
 .header-text-left {
   right: 0.3em;
   transition-property: right;
+  width: fit-content;
 }
 
 .header-text-left.hidden {
-  display: block !important;
+  display: initial !important;
   right: -4.2em;
 }
 
 .header-text-right {
   left: 0;
   transition-property: left;
+  width: fit-content;
 }
 
 .header-text-right.hidden {
-  display: block !important;
+  display: initial !important;
   left: -5em;
 }
 
@@ -192,6 +190,19 @@ header p {
 
 .waitingRoomItem {
   margin-top: 12vh;
+}
+
+.debug-btn {
+  position: fixed;
+  bottom: 120px;
+  right: 30px;
+  width: fit-content;
+  height: fit-content;
+  font-size: 1.5em;
+  background-color: var(--color-deep-space-sparkle);
+  color: var(--color-cosmic-latte);
+  box-shadow: 5px 5px 5px #00000066 !important;
+  z-index: 700;
 }
 
 .hide-header {
