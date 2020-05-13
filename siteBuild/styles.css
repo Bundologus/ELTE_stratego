@@ -205,9 +205,81 @@ header p {
   z-index: 700;
 }
 
-.hide-header {
-  display: block;
-  transition: display;
+.lobby-width {
+  width: calc(172vh - 580px);
+  margin: 4vh auto 0 auto;
+}
+
+.lobby-borad {
+  height: calc(86vh - 270px);
+  padding: 0;
+  flex: unset;
+  border: none;
+  box-shadow: 5px 5px 5px #00000066 !important;
+}
+
+.lobby-roster-counter {
+  position: fixed;
+  color: var(--color-cosmic-latte);
+  text-shadow: 0 0 2px black;
+}
+
+.lobby-roster-item {
+  height: 8vh;
+  width: 8vh;
+  background-color: var(--color-bronze);
+  box-shadow: 5px 5px 5px #00000066;
+  background-image: url(img/tileBG_.png);
+  background-size: contain;
+}
+
+.lobby-roster-item .card-body {
+  padding: 0 0.4em;
+  text-align: center;
+}
+
+.lobby-roster-image {
+  height: 100%;
+}
+
+.map-bg {
+  background-image: url("img/map_2k.jpg");
+  background-size: cover;
+  background-position: bottom center;
+}
+
+.grid {
+  width: 100%;
+  height: 100%;
+}
+
+.grid-cell {
+  width: 10%;
+  background-color: transparent;
+  border-style: dashed;
+  border-width: 4px;
+  border-color: var(--color-gunmetal);
+}
+
+#lobbyBoardRow tr:first-child .grid-cell {
+  background-color: #0a182466;
+}
+
+.grid-cell[colspan="2"] {
+  border-top-width: 0;
+  background-color: transparent !important;
+}
+
+.lobby-btn {
+  margin: 0 7vw;
+  height: 60%;
+  width: 20vw;
+}
+
+#startGameBtn {
+  background-color: var(--color-bronze);
+  color: var(--color-rosewood);
+  font-weight: 600;
 }
 
 .hidden {

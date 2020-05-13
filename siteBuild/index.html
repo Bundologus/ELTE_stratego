@@ -33,7 +33,7 @@
           <span class="header-text header-text-left">Üdvözli a </span>
         </div>
         <div id="gameTitleWrapper">
-          <a id="gameTitle" href="">STRATEGO</a>
+          <a id="gameTitle" href="./index.html">STRATEGO</a>
         </div>
         <div class="header-text-wrapper">
           <span class="header-text header-text-right">, Generális!</span>
@@ -69,7 +69,7 @@
                 Csatlakozás egy szobához
               </button>
               <div class="dropdown-menu w-100" aria-labelledby="joinRoomBtn">
-                <form class="d-flex flex-column pl-3 pr-3 pt-2 pb-2">
+                <div class="d-flex flex-column pl-3 pr-3 pt-2 pb-2">
                   <div class="form-group">
                     <input
                       type="textbox"
@@ -78,10 +78,14 @@
                       placeholder="A szoba száma"
                     />
                   </div>
-                  <button type="submit" class="btn btn-success w-50 m-auto">
+                  <a
+                    id="connectButton"
+                    href="lobby.html"
+                    class="btn btn-success w-50 m-auto d-flex align-items-center justify-content-center"
+                  >
                     Csatlakozás
-                  </button>
-                </form>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
