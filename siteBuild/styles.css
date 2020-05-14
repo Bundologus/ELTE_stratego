@@ -205,47 +205,11 @@ header p {
   z-index: 700;
 }
 
-.lobby-width {
-  width: calc(172vh - 580px);
-  margin: 4vh auto 0 auto;
-}
-
-.lobby-borad {
-  height: calc(86vh - 270px);
-  padding: 0;
-  flex: unset;
-  border: none;
-  box-shadow: 5px 5px 5px #00000066 !important;
-}
-
-.lobby-roster-counter {
-  position: fixed;
-  color: var(--color-cosmic-latte);
-  text-shadow: 0 0 2px black;
-}
-
-.lobby-roster-item {
-  height: 8vh;
-  width: 8vh;
-  background-color: var(--color-bronze);
-  box-shadow: 5px 5px 5px #00000066;
-  background-image: url(img/tileBG_.png);
-  background-size: contain;
-}
-
-.lobby-roster-item .card-body {
-  padding: 0 0.4em;
-  text-align: center;
-}
-
-.lobby-roster-image {
-  height: 100%;
-}
-
 .map-bg {
   background-image: url("img/map_2k.jpg");
   background-size: cover;
   background-position: bottom center;
+  border: none;
 }
 
 .grid {
@@ -280,6 +244,129 @@ header p {
   background-color: var(--color-bronze);
   color: var(--color-rosewood);
   font-weight: 600;
+}
+
+.lobby-width {
+  width: calc(172vh - 580px);
+  margin: 4vh auto 0 auto;
+}
+
+.lobby-board {
+  height: calc(86vh - 270px);
+  padding: 0;
+  flex: unset;
+  box-shadow: 5px 5px 5px #00000066 !important;
+}
+
+#enemyPanel .game-roster {
+  margin-right: 4em;
+}
+
+#friendlyPanel .game-roster {
+  margin-left: 4em;
+}
+
+.lobby.roster-item {
+  height: 10vh;
+  width: 8vh;
+  background-color: var(--color-bronze);
+  box-shadow: 5px 5px 5px #00000066;
+  background-image: url(img/tileBG_.png);
+  background-size: cover;
+}
+
+.game.roster-item {
+  height: 10vh;
+  width: 8vh;
+  background-color: var(--color-bronze);
+  box-shadow: 5px 5px 5px #00000066;
+  background-image: url(img/tileBG_.png);
+  background-size: cover;
+}
+
+.lobby.roster-item .card-body {
+  padding: 0 0.4em;
+  text-align: center;
+}
+
+.game.roster-item .card-body {
+  padding: 0;
+  text-align: center;
+}
+
+.lobby.roster-counter {
+  position: absolute;
+  color: var(--color-cosmic-latte);
+  text-shadow: 0 0 2px black;
+}
+
+.game.roster-counter {
+  position: absolute;
+  color: var(--color-cosmic-latte);
+  text-shadow: 0 0 2px black;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 115%;
+}
+
+#friendlyPanel .game.roster-counter {
+  left: initial;
+  right: 115%;
+}
+
+.lobby.roster-image {
+  height: calc(100% - 0.6em);
+  margin-top: 0.3em;
+}
+
+.game.roster-image {
+  height: calc(100% - 0.6em);
+  margin-top: 0.3em;
+}
+
+#gameBoardRow {
+  height: calc(100vh - 200px);
+}
+
+.game-board {
+  width: calc(92vh - 200px);
+  height: calc(92vh - 200px);
+  margin: 4vh auto 0 auto;
+  padding: 0;
+  flex: unset;
+  box-shadow: 5px 5px 5px #00000066 !important;
+}
+
+.status-panel {
+  height: 100%;
+  padding: 1em;
+}
+
+.game-roster {
+  height: 100%;
+}
+
+.turn-indicator {
+  position: absolute;
+  top: 2em;
+  width: 2em;
+  height: 2em;
+  border: 3px solid #666;
+  border-radius: 1em;
+  background: var(--color-gunmetal);
+  transition: background-color 1s ease-out;
+}
+
+.turn-indicator.activated {
+  background-color: green;
+}
+
+#enemyPanel .turn-indicator {
+  left: 100%;
+}
+
+#friendlyPanel .turn-indicator {
+  right: 100%;
 }
 
 .hidden {

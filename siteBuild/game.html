@@ -35,10 +35,91 @@
       </h2>
     </header>
     <main class="row">
-      <div class="col-md-2"></div>
-      <div class="col-md-8">
+      <div class="col-12">
         <div id="gameBoardRow" class="row">
-          <div class="col-12 card map-bg lobby-borad">
+          <div
+            id="enemyPanel"
+            class="col-md-2 status-panel d-flex flex-row justify-content-start"
+          >
+            <div class="turn-indicator"></div>
+            <div class="game-roster d-flex flex-column justify-content-between">
+              <div class="game roster-item card">
+                <div class="card-body">
+                  <h3 class="game roster-counter">x1</h3>
+                  <img class="game roster-image" src="img/e1.png" />
+                </div>
+              </div>
+              <div class="game roster-item card">
+                <div class="card-body">
+                  <h3 class="game roster-counter">x10</h3>
+                  <img class="game roster-image" src="img/e2.png" />
+                </div>
+              </div>
+              <div class="game roster-item card">
+                <div class="card-body">
+                  <h3 class="game roster-counter">x1</h3>
+                  <img class="game roster-image" src="img/e3.png" />
+                </div>
+              </div>
+              <div class="game roster-item card">
+                <div class="card-body">
+                  <h3 class="game roster-counter">x1</h3>
+                  <img class="game roster-image" src="img/e4.png" />
+                </div>
+              </div>
+              <div class="game roster-item card">
+                <div class="card-body">
+                  <h3 class="game roster-counter">x1</h3>
+                  <img class="game roster-image" src="img/e5.png" />
+                </div>
+              </div>
+              <div class="game roster-item card">
+                <div class="card-body">
+                  <h3 class="game roster-counter">x1</h3>
+                  <img class="game roster-image" src="img/e6.png" />
+                </div>
+              </div>
+            </div>
+            <div class="game-roster d-flex flex-column justify-content-between">
+              <div class="game roster-item card">
+                <div class="card-body">
+                  <h3 class="game roster-counter">x1</h3>
+                  <img class="game roster-image" src="img/e7.png" />
+                </div>
+              </div>
+              <div class="game roster-item card">
+                <div class="card-body">
+                  <h3 class="game roster-counter">x1</h3>
+                  <img class="game roster-image" src="img/e8.png" />
+                </div>
+              </div>
+              <div class="game roster-item card">
+                <div class="card-body">
+                  <h3 class="game roster-counter">x1</h3>
+                  <img class="game roster-image" src="img/e9.png" />
+                </div>
+              </div>
+              <div class="game roster-item card">
+                <div class="card-body">
+                  <h3 class="game roster-counter">x1</h3>
+                  <img class="game roster-image" src="img/e10.png" />
+                </div>
+              </div>
+              <div class="game roster-item card">
+                <div class="card-body">
+                  <h3 class="game roster-counter">x1</h3>
+                  <img class="game roster-image" src="img/eb.png" />
+                </div>
+              </div>
+              <div class="game roster-item card">
+                <div class="card-body">
+                  <h3 class="game roster-counter">x1</h3>
+                  <img class="game roster-image" src="img/ef.png" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8 card map-bg game-board">
             <div class="card-body">
               <table class="grid">
                 <tbody>
@@ -160,9 +241,90 @@
               </table>
             </div>
           </div>
+          <div
+            id="friendlyPanel"
+            class="col-md-2 status-panel d-flex flex-row justify-content-end"
+          >
+            <div class="turn-indicator"></div>
+            <div class="game-roster d-flex flex-column justify-content-between">
+              <div class="game roster-item card">
+                <div class="card-body">
+                  <h3 class="game roster-counter">x1</h3>
+                  <img class="game roster-image" src="img/f1.png" />
+                </div>
+              </div>
+              <div class="game roster-item card">
+                <div class="card-body">
+                  <h3 class="game roster-counter">x10</h3>
+                  <img class="game roster-image" src="img/f2.png" />
+                </div>
+              </div>
+              <div class="game roster-item card">
+                <div class="card-body">
+                  <h3 class="game roster-counter">x1</h3>
+                  <img class="game roster-image" src="img/f3.png" />
+                </div>
+              </div>
+              <div class="game roster-item card">
+                <div class="card-body">
+                  <h3 class="game roster-counter">x1</h3>
+                  <img class="game roster-image" src="img/f4.png" />
+                </div>
+              </div>
+              <div class="game roster-item card">
+                <div class="card-body">
+                  <h3 class="game roster-counter">x1</h3>
+                  <img class="game roster-image" src="img/f5.png" />
+                </div>
+              </div>
+              <div class="game roster-item card">
+                <div class="card-body">
+                  <h3 class="game roster-counter">x1</h3>
+                  <img class="game roster-image" src="img/f6.png" />
+                </div>
+              </div>
+            </div>
+            <div class="game-roster d-flex flex-column justify-content-between">
+              <div class="game roster-item card">
+                <div class="card-body">
+                  <h3 class="game roster-counter">x1</h3>
+                  <img class="game roster-image" src="img/f7.png" />
+                </div>
+              </div>
+              <div class="game roster-item card">
+                <div class="card-body">
+                  <h3 class="game roster-counter">x1</h3>
+                  <img class="game roster-image" src="img/f8.png" />
+                </div>
+              </div>
+              <div class="game roster-item card">
+                <div class="card-body">
+                  <h3 class="game roster-counter">x1</h3>
+                  <img class="game roster-image" src="img/f9.png" />
+                </div>
+              </div>
+              <div class="game roster-item card">
+                <div class="card-body">
+                  <h3 class="game roster-counter">x1</h3>
+                  <img class="game roster-image" src="img/f10.png" />
+                </div>
+              </div>
+              <div class="game roster-item card">
+                <div class="card-body">
+                  <h3 class="game roster-counter">x1</h3>
+                  <img class="game roster-image" src="img/fb.png" />
+                </div>
+              </div>
+              <div class="game roster-item card">
+                <div class="card-body">
+                  <h3 class="game roster-counter">x1</h3>
+                  <img class="game roster-image" src="img/ff.png" />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="col-md-2"></div>
     </main>
     <footer class="row"></footer>
   </body>
