@@ -1,13 +1,379 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Forum&display=swap");
+
+:root {
+  --color-black-bean: #400406;
+  --color-rosewood: #641111;
+  --color-bronze: #bd7f32;
+  --color-blond: #fff3b0;
+  --color-cosmic-latte: #fbf7e8;
+  --color-gunmetal: #0a1824;
+  --color-deep-space-sparkle: #335c67;
+  --font-heavy: "Cinzel Decorative", cursive;
+  --font-regular: "Forum", cursive;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html,
+p,
+a,
+button,
+input,
+h1,
+h2,
+h3,
+#headerText {
+  font-family: var(--font-regular) !important;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+}
+
+p {
+  font-size: 1.1em;
+}
+
+header,
+footer {
+  height: 100px;
+  z-index: 500;
+}
+
+header {
+  background: var(--color-bronze);
+  background: -moz-linear-gradient(
+    0deg,
+    rgba(189, 127, 50, 1) 36%,
+    rgba(210, 146, 67, 1) 71%,
+    rgba(223, 163, 89, 1) 89%,
+    rgba(255, 184, 96, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    0deg,
+    rgba(189, 127, 50, 1) 36%,
+    rgba(210, 146, 67, 1) 71%,
+    rgba(223, 163, 89, 1) 89%,
+    rgba(255, 184, 96, 1) 100%
+  );
+  background: linear-gradient(
+    0deg,
+    rgba(189, 127, 50, 1) 36%,
+    rgba(210, 146, 67, 1) 71%,
+    rgba(223, 163, 89, 1) 89%,
+    rgba(255, 184, 96, 1) 100%
+  );
+}
+
+main {
+  height: calc(100vh - 200px);
+  background: rgb(36, 0, 0);
+  background: -moz-radial-gradient(
+    circle at bottom,
+    rgba(36, 0, 0, 1) 0%,
+    rgba(47, 0, 0, 1) 50%,
+    rgba(84, 1, 1, 1) 100%
+  );
+  background: -webkit-radial-gradient(
+    circle at bottom,
+    rgba(36, 0, 0, 1) 0%,
+    rgba(47, 0, 0, 1) 50%,
+    rgba(84, 1, 1, 1) 100%
+  );
+  background: radial-gradient(
+    circle at bottom,
+    rgba(36, 0, 0, 1) 0%,
+    rgba(47, 0, 0, 1) 50%,
+    rgba(84, 1, 1, 1) 100%
+  );
+  box-shadow: inset 0 5px 5px rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+#gameTitle {
+  color: var(--color-rosewood);
+  font-family: var(--font-heavy) !important;
+  font-weight: 700 !important;
+  font-size: 3rem;
+}
+
+#gameTitle:hover {
+  text-decoration: none;
+}
+
+header p {
+  font-size: 3rem;
+  line-height: 90px;
+}
+
+.header-text-wrapper {
+  padding: 5px;
+  width: calc(50% - 5rem);
+  overflow: hidden;
+}
+
+.header-text-wrapper:first-of-type {
+  text-align: right;
+  padding-right: 4px;
+}
+
+.header-text {
+  transition-delay: 0.2s;
+  transition-duration: 1.5s;
+  transition-timing-function: ease;
+  font-size: 3rem;
+  position: relative;
+}
+
+.header-text-left {
+  right: 0.3em;
+  transition-property: right;
+  width: fit-content;
+}
+
+.header-text-left.hidden {
+  display: initial !important;
+  right: -4.2em;
+}
+
+.header-text-right {
+  left: 0;
+  transition-property: left;
+  width: fit-content;
+}
+
+.header-text-right.hidden {
+  display: initial !important;
+  left: -5em;
+}
+
+.menu-btn {
+  width: 30vw;
+  height: 90px;
+  font-size: 2em;
+  box-shadow: 5px 5px 5px #00000066 !important;
+  z-index: 300;
+}
+
+.menu-btn-color {
+  background-color: var(--color-deep-space-sparkle);
+  color: var(--color-cosmic-latte);
+}
+
+#menuButtonWrapper {
+  margin: 90px 0 90px 0;
+  padding: 0;
+}
+
+#join-room-btn {
+  font-size: unset;
+}
+
+#rules {
+  background-color: var(--color-cosmic-latte);
+  color: var(--color-deep-space-sparkle);
+  box-shadow: inset 0 0 75px -20px var(--color-bronze), 5px 5px 5px #00000066 !important;
+  border: none;
+}
+
+.waitingRoomText {
+  color: var(--color-blond);
+  font-size: 2em;
+  filter: drop-shadow(5px 5px 15px #000000cc) !important;
+}
+
+#waitingRoomId {
+  color: var(--color-cosmic-latte);
+  font-size: 5em;
+  font-family: var(--font-heavy) !important;
+}
+
+.waitingRoomItem {
+  margin-top: 12vh;
+}
+
+.debug-btn {
+  position: fixed;
+  bottom: 120px;
+  right: 30px;
+  width: fit-content;
+  height: fit-content;
+  font-size: 1.5em;
+  background-color: var(--color-deep-space-sparkle);
+  color: var(--color-cosmic-latte);
+  box-shadow: 5px 5px 5px #00000066 !important;
+  z-index: 700;
+}
+
+.map-bg {
+  background-image: url("img/map_2k.jpg");
+  background-size: cover;
+  background-position: bottom center;
+  border: none;
+}
+
+.grid {
+  width: 100%;
+  height: 100%;
+}
+
+.grid-cell {
+  width: 10%;
+  background-color: transparent;
+  border-style: dashed;
+  border-width: 4px;
+  border-color: var(--color-gunmetal);
+}
+
+#lobbyBoardRow tr:first-child .grid-cell {
+  background-color: #0a182466;
+}
+
+.grid-cell[colspan="2"] {
+  border-top-width: 0;
+  background-color: transparent !important;
+}
+
+.lobby-btn {
+  margin: 0 7vw;
+  height: 60%;
+  width: 20vw;
+}
+
+#startGameBtn {
+  background-color: var(--color-bronze);
+  color: var(--color-rosewood);
+  font-weight: 600;
+}
+
+.lobby-width {
+  width: calc(172vh - 580px);
+  margin: 4vh auto 0 auto;
+}
+
+.lobby-board {
+  height: calc(86vh - 270px);
+  padding: 0;
+  flex: unset;
+  box-shadow: 5px 5px 5px #00000066 !important;
+}
+
+#enemyPanel .game-roster {
+  margin-right: 4em;
+}
+
+#friendlyPanel .game-roster {
+  margin-left: 4em;
+}
+
+.lobby.roster-item {
+  height: 10vh;
+  width: 8vh;
+  background-color: var(--color-bronze);
+  box-shadow: 5px 5px 5px #00000066;
+  background-image: url(img/tileBG_.png);
+  background-size: cover;
+}
+
+.game.roster-item {
+  height: 10vh;
+  width: 8vh;
+  background-color: var(--color-bronze);
+  box-shadow: 5px 5px 5px #00000066;
+  background-image: url(img/tileBG_.png);
+  background-size: cover;
+}
+
+.lobby.roster-item .card-body {
+  padding: 0 0.4em;
+  text-align: center;
+}
+
+.game.roster-item .card-body {
+  padding: 0;
+  text-align: center;
+}
+
+.lobby.roster-counter {
+  position: absolute;
+  color: var(--color-cosmic-latte);
+  text-shadow: 0 0 2px black;
+}
+
+.game.roster-counter {
+  position: absolute;
+  color: var(--color-cosmic-latte);
+  text-shadow: 0 0 2px black;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 115%;
+}
+
+#friendlyPanel .game.roster-counter {
+  left: initial;
+  right: 115%;
+}
+
+.lobby.roster-image {
+  height: calc(100% - 0.6em);
+  margin-top: 0.3em;
+}
+
+.game.roster-image {
+  height: calc(100% - 0.6em);
+  margin-top: 0.3em;
+}
+
+#gameBoardRow {
+  height: calc(100vh - 200px);
+}
+
+.game-board {
+  width: calc(92vh - 200px);
+  height: calc(92vh - 200px);
+  margin: 4vh auto 0 auto;
+  padding: 0;
+  flex: unset;
+  box-shadow: 5px 5px 5px #00000066 !important;
+}
+
+.status-panel {
+  height: 100%;
+  padding: 1em;
+}
+
+.game-roster {
+  height: 100%;
+}
+
+.turn-indicator {
+  position: absolute;
+  top: 2em;
+  width: 2em;
+  height: 2em;
+  border: 3px solid #666;
+  border-radius: 1em;
+  background: var(--color-gunmetal);
+  transition: background-color 1s ease-out;
+}
+
+.turn-indicator.activated {
+  background-color: green;
+}
+
+#enemyPanel .turn-indicator {
+  left: 100%;
+}
+
+#friendlyPanel .turn-indicator {
+  right: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+footer {
+  background: var(--color-gunmetal);
+  box-shadow: 0px -5px 5px #00000066;
 }
