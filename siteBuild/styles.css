@@ -258,6 +258,11 @@ header p {
   box-shadow: 5px 5px 5px #00000066 !important;
 }
 
+.lobby-btn-row {
+  position: fixed;
+  bottom: 3em;
+}
+
 #enemyPanel .game-roster {
   margin-right: 4em;
 }
