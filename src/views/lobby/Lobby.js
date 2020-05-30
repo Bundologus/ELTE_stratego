@@ -1,7 +1,8 @@
-import React from 'react'
+import React from "react";
 import { Link } from "react-router-dom";
+import { ItemCard } from "views/itemCard/itemCard";
 
-import f1 from "img/f1.png";
+/* import f1 from "img/f1.png";
 import f2 from "img/f2.png";
 import f3 from "img/f3.png";
 import f4 from "img/f4.png";
@@ -12,9 +13,23 @@ import f8 from "img/f8.png";
 import f9 from "img/f9.png";
 import f10 from "img/f10.png";
 import fb from "img/fb.png";
-import ff from "img/ff.png";
+import ff from "img/ff.png"; */
 
 export const Lobby = () => {
+  const images = [
+    { tpye: "f1", count: 1 },
+    { tpye: "f2", count: 8 },
+    { tpye: "f3", count: 5 },
+    { tpye: "f4", count: 4 },
+    { tpye: "f5", count: 4 },
+    { tpye: "f6", count: 4 },
+    { tpye: "f7", count: 3 },
+    { tpye: "f8", count: 2 },
+    { tpye: "f9", count: 1 },
+    { tpye: "f10", count: 1 },
+    { tpye: "fb", count: 6 },
+    { tpye: "ff", count: 1 },
+  ];
   return (
     <div className="col-12 container">
       <div id="lobbyBoardRow" className="row">
@@ -90,7 +105,12 @@ export const Lobby = () => {
           id="lobbyRosterWrapper"
           className="lobby-width d-flex flex-row justify-content-between"
         >
-          <div className="lobby roster-item card">
+          {
+            images.map(img => {
+              img.placementClass = "lobby";
+              return <ItemCard props={img}></ItemCard>;
+            })
+            /* <div className="lobby roster-item card">
             <div className="card-body">
               <h3 className="lobby roster-counter">x1</h3>
               <img className="lobby roster-image" src={f1} alt="" />
@@ -161,7 +181,8 @@ export const Lobby = () => {
               <h3 className="lobby roster-counter">x1</h3>
               <img className="lobby roster-image" src={ff} alt="" />
             </div>
-          </div>
+          </div> */
+          }
         </div>
       </div>
       <div className="row lobby-btn-row">
@@ -173,7 +194,7 @@ export const Lobby = () => {
             className="btn menu-btn menu-btn-color lobby-btn d-flex align-items-center justify-content-center"
           >
             Vissza a kezdőlapra
-        </Link>
+          </Link>
           <Link
             type="button"
             to="/game"
@@ -181,9 +202,9 @@ export const Lobby = () => {
             className="btn menu-btn lobby-btn d-flex align-items-center justify-content-center"
           >
             Kész!
-        </Link>
+          </Link>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
