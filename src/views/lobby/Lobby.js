@@ -107,8 +107,11 @@ export const Lobby = () => {
         >
           {
             images.map(img => {
-              img.placementClass = "lobby";
-              return <ItemCard props={img}></ItemCard>;
+              //img.placementClass = "lobby";
+
+              console.log(img);
+              return <ItemCard key={img.tpye.toString()} imgFile={img.tpye} count={img.count} placementClass="lobby"></ItemCard>;
+
             })
             /* <div className="lobby roster-item card">
             <div className="card-body">
