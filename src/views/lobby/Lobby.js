@@ -106,12 +106,15 @@ export const Lobby = () => {
           className="lobby-width d-flex flex-row justify-content-between"
         >
           {
-            images.map(img => {
-              //img.placementClass = "lobby";
-
-              console.log(img);
-              return <ItemCard key={img.tpye.toString()} imgFile={img.tpye} count={img.count} placementClass="lobby"></ItemCard>;
-
+            images.map((img) => {
+              return (
+                <ItemCard
+                  key={img.tpye.toString()}
+                  imgFile={img.tpye}
+                  count={img.count}
+                  placementClass="lobby"
+                ></ItemCard>
+              );
             })
             /* <div className="lobby roster-item card">
             <div className="card-body">
