@@ -1,4 +1,5 @@
 import React from "react";
+import { ItemCard } from "views/itemCard/ItemCard";
 
 import f1 from "img/f1.png";
 import f2 from "img/f2.png";
@@ -24,16 +25,17 @@ import e9 from "img/e9.png";
 import e10 from "img/e10.png";
 import eb from "img/eb.png";
 import ef from "img/ef.png";
-import { ItemCard } from "views/itemCard/ItemCard";
 
 export const Game = () => {
-  const enemyImages = [
+  const enemyImagesLeft = [
     { tpye: e1, count: 1 },
     { tpye: e2, count: 8 },
     { tpye: e3, count: 5 },
     { tpye: e4, count: 4 },
     { tpye: e5, count: 4 },
     { tpye: e6, count: 4 },
+  ];
+  const enemyImagesRight = [
     { tpye: e7, count: 3 },
     { tpye: e8, count: 2 },
     { tpye: e9, count: 1 },
@@ -41,13 +43,15 @@ export const Game = () => {
     { tpye: eb, count: 6 },
     { tpye: ef, count: 1 },
   ];
-  const friendlyImages = [
+  const friendlyImagesRight = [
     { tpye: f1, count: 1 },
     { tpye: f2, count: 8 },
     { tpye: f3, count: 5 },
     { tpye: f4, count: 4 },
     { tpye: f5, count: 4 },
     { tpye: f6, count: 4 },
+  ];
+  const friendlyImagesLeft = [
     { tpye: f7, count: 3 },
     { tpye: f8, count: 2 },
     { tpye: f9, count: 1 },
@@ -57,7 +61,7 @@ export const Game = () => {
   ];
 
   return (
-    <div className="col-12">
+    <div className="col-12 container">
       <div id="gameBoardRow" className="row">
         <div
           id="enemyPanel"
@@ -65,7 +69,19 @@ export const Game = () => {
         >
           <div className="turn-indicator"></div>
           <div className="game-roster d-flex flex-column justify-content-between">
-            {enemyImages.map((img) => {
+            {enemyImagesLeft.map((img) => {
+              return (
+                <ItemCard
+                  key={img.tpye.toString()}
+                  imgFile={img.type}
+                  count={img.count}
+                  placementClass="game"
+                ></ItemCard>
+              );
+            })}
+          </div>
+          <div className="game-roster d-flex flex-column justify-content-between">
+            {enemyImagesRight.map((img) => {
               return (
                 <ItemCard
                   key={img.tpye.toString()}
@@ -205,80 +221,28 @@ export const Game = () => {
         >
           <div className="turn-indicator"></div>
           <div className="game-roster d-flex flex-column justify-content-between">
-            <div className="game roster-item card">
-              <div className="card-body">
-                <h3 className="game roster-counter">x1</h3>
-                <img className="game roster-image" src={f1} alt="" />
-              </div>
-            </div>
-            <div className="game roster-item card">
-              <div className="card-body">
-                <h3 className="game roster-counter">x8</h3>
-                <img className="game roster-image" src={f2} alt="" />
-              </div>
-            </div>
-            <div className="game roster-item card">
-              <div className="card-body">
-                <h3 className="game roster-counter">x5</h3>
-                <img className="game roster-image" src={f3} alt="" />
-              </div>
-            </div>
-            <div className="game roster-item card">
-              <div className="card-body">
-                <h3 className="game roster-counter">x4</h3>
-                <img className="game roster-image" src={f4} alt="" />
-              </div>
-            </div>
-            <div className="game roster-item card">
-              <div className="card-body">
-                <h3 className="game roster-counter">x4</h3>
-                <img className="game roster-image" src={f5} alt="" />
-              </div>
-            </div>
-            <div className="game roster-item card">
-              <div className="card-body">
-                <h3 className="game roster-counter">x4</h3>
-                <img className="game roster-image" src={f6} alt="" />
-              </div>
-            </div>
+            {friendlyImagesLeft.map((img) => {
+              return (
+                <ItemCard
+                  key={img.tpye.toString()}
+                  imgFile={img.type}
+                  count={img.count}
+                  placementClass="game"
+                ></ItemCard>
+              );
+            })}
           </div>
           <div className="game-roster d-flex flex-column justify-content-between">
-            <div className="game roster-item card">
-              <div className="card-body">
-                <h3 className="game roster-counter">x3</h3>
-                <img className="game roster-image" src={f7} alt="" />
-              </div>
-            </div>
-            <div className="game roster-item card">
-              <div className="card-body">
-                <h3 className="game roster-counter">x2</h3>
-                <img className="game roster-image" src={f8} alt="" />
-              </div>
-            </div>
-            <div className="game roster-item card">
-              <div className="card-body">
-                <h3 className="game roster-counter">x1</h3>
-                <img className="game roster-image" src={f9} alt="" />
-              </div>
-            </div>
-            <div className="game roster-item card">
-              <div className="card-body">
-                <h3 className="game roster-counter">x1</h3>
-                <img className="game roster-image" src={f10} alt="" />
-              </div>
-            </div>
-            <div className="game roster-item card">
-              <div className="card-body">
-                <h3 className="game roster-counter">x6</h3>
-                <img className="game roster-image" src={fb} alt="" />
-              </div>
-            </div>
-            <div className="game roster-item card">
-              <div className="card-body">
-                <h3 className="game roster-counter">x1</h3>
-                <img className="game roster-image" src={ff} alt="" />
-              </div>
-            </div>
+            {friendlyImagesRight.map((img) => {
+              return (
+                <ItemCard
+                  key={img.tpye.toString()}
+                  imgFile={img.type}
+                  count={img.count}
+                  placementClass="game"
+                ></ItemCard>
+              );
+            })}
           </div>
         </div>
       </div>

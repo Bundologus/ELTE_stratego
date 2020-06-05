@@ -2,7 +2,8 @@ import React from "react";
 
 export const ItemCard = (props) => {
   const { imgFile, count, placementClass } = props;
-  //const imgFile = React.lazy(_ => import(`img/${itemType}.png`));
+
+  console.log(`ItemCard: {${imgFile} + ${count} + ${placementClass}}`);
 
   return (
     <div className={placementClass + " roster-item card"}>

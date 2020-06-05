@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { ItemCard } from "../itemCard/ItemCard";
+import { v4 } from "uuid";
 
 import f1 from "img/f1.png";
 import f2 from "img/f2.png";
@@ -17,18 +18,18 @@ import ff from "img/ff.png";
 
 export const Lobby = () => {
   const images = [
-    { tpye: f1, count: 1 },
-    { tpye: f2, count: 8 },
-    { tpye: f3, count: 5 },
-    { tpye: f4, count: 4 },
-    { tpye: f5, count: 4 },
-    { tpye: f6, count: 4 },
-    { tpye: f7, count: 3 },
-    { tpye: f8, count: 2 },
-    { tpye: f9, count: 1 },
-    { tpye: f10, count: 1 },
-    { tpye: fb, count: 6 },
-    { tpye: ff, count: 1 },
+    { id: v4(), tpye: f1, count: 1 },
+    { id: v4(), tpye: f2, count: 8 },
+    { id: v4(), tpye: f3, count: 5 },
+    { id: v4(), tpye: f4, count: 4 },
+    { id: v4(), tpye: f5, count: 4 },
+    { id: v4(), tpye: f6, count: 4 },
+    { id: v4(), tpye: f7, count: 3 },
+    { id: v4(), tpye: f8, count: 2 },
+    { id: v4(), tpye: f9, count: 1 },
+    { id: v4(), tpye: f10, count: 1 },
+    { id: v4(), tpye: fb, count: 6 },
+    { id: v4(), tpye: ff, count: 1 },
   ];
   return (
     <div className="col-12 container">
@@ -105,90 +106,16 @@ export const Lobby = () => {
           id="lobbyRosterWrapper"
           className="lobby-width d-flex flex-row justify-content-between"
         >
-          {
-            images.map((img) => {
-              return (
-                <ItemCard
-                  key={img.tpye.toString()}
-                  imgFile={img.tpye}
-                  count={img.count}
-                  placementClass="lobby"
-                ></ItemCard>
-              );
-            })
-            /* <div className="lobby roster-item card">
-            <div className="card-body">
-              <h3 className="lobby roster-counter">x1</h3>
-              <img className="lobby roster-image" src={f1} alt="" />
-            </div>
-          </div>
-          <div className="lobby roster-item card">
-            <div className="card-body">
-              <h3 className="lobby roster-counter">x8</h3>
-              <img className="lobby roster-image" src={f2} alt="" />
-            </div>
-          </div>
-          <div className="lobby roster-item card">
-            <div className="card-body">
-              <h3 className="lobby roster-counter">x5</h3>
-              <img className="lobby roster-image" src={f3} alt="" />
-            </div>
-          </div>
-          <div className="lobby roster-item card">
-            <div className="card-body">
-              <h3 className="lobby roster-counter">x4</h3>
-              <img className="lobby roster-image" src={f4} alt="" />
-            </div>
-          </div>
-          <div className="lobby roster-item card">
-            <div className="card-body">
-              <h3 className="lobby roster-counter">x4</h3>
-              <img className="lobby roster-image" src={f5} alt="" />
-            </div>
-          </div>
-          <div className="lobby roster-item card">
-            <div className="card-body">
-              <h3 className="lobby roster-counter">x4</h3>
-              <img className="lobby roster-image" src={f6} alt="" />
-            </div>
-          </div>
-          <div className="lobby roster-item card">
-            <div className="card-body">
-              <h3 className="lobby roster-counter">x3</h3>
-              <img className="lobby roster-image" src={f7} alt="" />
-            </div>
-          </div>
-          <div className="lobby roster-item card">
-            <div className="card-body">
-              <h3 className="lobby roster-counter">x2</h3>
-              <img className="lobby roster-image" src={f8} alt="" />
-            </div>
-          </div>
-          <div className="lobby roster-item card">
-            <div className="card-body">
-              <h3 className="lobby roster-counter">x1</h3>
-              <img className="lobby roster-image" src={f9} alt="" />
-            </div>
-          </div>
-          <div className="lobby roster-item card">
-            <div className="card-body">
-              <h3 className="lobby roster-counter">x1</h3>
-              <img className="lobby roster-image" src={f10} alt="" />
-            </div>
-          </div>
-          <div className="lobby roster-item card">
-            <div className="card-body">
-              <h3 className="lobby roster-counter">x6</h3>
-              <img className="lobby roster-image" src={fb} alt="" />
-            </div>
-          </div>
-          <div className="lobby roster-item card">
-            <div className="card-body">
-              <h3 className="lobby roster-counter">x1</h3>
-              <img className="lobby roster-image" src={ff} alt="" />
-            </div>
-          </div> */
-          }
+          {images.map((img) => {
+            return (
+              <ItemCard
+                key={img.id}
+                imgFile={img.type}
+                count={img.count}
+                placementClass="lobby"
+              ></ItemCard>
+            );
+          })}
         </div>
       </div>
       <div className="row lobby-btn-row">
